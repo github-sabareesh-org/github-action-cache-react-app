@@ -9,6 +9,9 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
+        defaults:
+          run:
+            working-directory: react-app
         steps:
             #checkout code
             - name: Checkout code
@@ -30,5 +33,5 @@ jobs:
         #Deploying to nonprod
             - name: Deploying to nonprod
               run: echo "Deploying to nonprod"
-              
+
            
